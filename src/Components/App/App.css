@@ -1,0 +1,33 @@
+.App {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.App-header {
+  width: 100%;
+}
+
+.App-header a {
+  text-decoration: none;
+}
+
+.App-header__title {
+  cursor: pointer;
+  font-family: Roboto Condensed, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 42px;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #000000;
+}
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}

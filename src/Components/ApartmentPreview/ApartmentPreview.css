@@ -1,0 +1,31 @@
+.preview {
+  margin: 0 10px 25px 0;
+}
+
+.preview-image {
+  cursor: pointer;
+}
+
+.preview-details,
+.preview-price,
+.preview-adress {
+  max-width: 240px;
+  hyphens: auto;
+  word-wrap: break-word;
+  line-height: 22px;
+}
+
+.preview-adress {
+  color: #8f8f8f;
+  font-size: 14px;
+  line-height: normal;
+}
+.preview-details {
+  color: #009cf0;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.preview-price {
+  font-weight: bold;
+}
