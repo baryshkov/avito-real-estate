@@ -12,18 +12,27 @@ const ApartmentPreview = ({ id, address, title, previewImage, price, onItemSelec
         onClick={() => onItemSelected(id)}
       />
       <div className="preview-details">
-        <a onClick={() => onItemSelected(id)}>{title}</a>
+        <a className="link" href={`${id}`} onClick={() => onItemSelected(id)}>
+          {title}
+        </a>
       </div>
       <div className="preview-price">
-        <a onClick={() => onItemSelected(id)}>{price}</a>
+        <a className="link" href={`${id}`} onClick={() => onItemSelected(id)}>
+          {price}
+        </a>
       </div>
       <div className="preview-adress">{address}</div>
     </div>
   );
 };
 
-// ApartmentPage.propTypes = {
-//
-// };
+ApartmentPreview.propTypes = {
+  id: PropTypes.number.isRequired,
+  address: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  previewImage: PropTypes.string.isRequired,
+  price: PropTypes.string.isRequired,
+  onItemSelected: PropTypes.func.isRequired,
+};
 
 export default ApartmentPreview;

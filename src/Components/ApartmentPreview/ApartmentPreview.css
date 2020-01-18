@@ -15,17 +15,27 @@
   line-height: 22px;
 }
 
+.link {
+  text-decoration: none;
+}
+
+.link:visited {
+  color: none;
+}
+
 .preview-adress {
   color: #8f8f8f;
   font-size: 14px;
   line-height: normal;
 }
-.preview-details {
-  color: #009cf0;
+
+.preview-details .link {
+  color: #01aaff;
   font-weight: bold;
   cursor: pointer;
 }
 
-.preview-price {
+.preview-price .link {
   font-weight: bold;
+  color: black;
 }

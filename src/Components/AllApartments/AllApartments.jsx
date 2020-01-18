@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { withRouter } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import ApiService from '../../apiService/apiService';
 import ApartmentPreview from '../ApartmentPreview';
 import Spinner from '../Spinner';
-import PropTypes from 'prop-types';
+import './AllApartments.css';
 
 const AllApartments = ({ history }) => {
   const apiService = new ApiService();
@@ -19,10 +20,11 @@ const AllApartments = ({ history }) => {
       setLoading(false);
     };
     fetchData();
+    // eslint-disable-next-line
   }, []);
   document.title = 'Avito Real Estate';
   return (
-    <div className="container">
+    <div className="apartments-container">
       {(loading && <Spinner />) ||
         (items &&
           items.map(item => (
@@ -38,6 +40,10 @@ const AllApartments = ({ history }) => {
   );
 };
 
-AllApartments.propTypes = {};
+AllApartments.propTypes = {
+  history: PropTypes.shape({
+    push: PropTypes.func.isRequired,
+  }).isRequired,
+};
 
 export default withRouter(AllApartments);
