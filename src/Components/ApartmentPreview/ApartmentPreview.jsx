@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import './ApartmentPreview.css';
 import PropTypes from 'prop-types';
 
@@ -6,22 +8,22 @@ const ApartmentPreview = ({ id, address, title, previewImage, price, onItemSelec
   return (
     <div className="preview">
       <img
-        className="preview-image"
+        className="preview__image"
         src={previewImage}
         alt={title}
         onClick={() => onItemSelected(id)}
       />
-      <div className="preview-details">
-        <a className="link" href={`${id}`} onClick={() => onItemSelected(id)}>
+      <div className="preview__details">
+        <Link className="link" to={`/apartments/${id}`}>
           {title}
-        </a>
+        </Link>
       </div>
-      <div className="preview-price">
-        <a className="link" href={`${id}`} onClick={() => onItemSelected(id)}>
+      <div className="preview__price">
+        <Link className="link" to={`/apartments/${id}`}>
           {price}
-        </a>
+        </Link>
       </div>
-      <div className="preview-adress">{address}</div>
+      <div className="preview__adress">{address}</div>
     </div>
   );
 };

@@ -2,13 +2,13 @@
   margin: 0 10px 25px 0;
 }
 
-.preview-image {
+.preview__image {
   cursor: pointer;
 }
 
-.preview-details,
-.preview-price,
-.preview-adress {
+.preview__details,
+.preview__price,
+.preview__adress {
   max-width: 240px;
   hyphens: auto;
   word-wrap: break-word;
@@ -19,23 +19,19 @@
   text-decoration: none;
 }
 
-.link:visited {
-  color: none;
-}
-
-.preview-adress {
+.preview__adress {
   color: #8f8f8f;
   font-size: 14px;
   line-height: normal;
 }
 
-.preview-details .link {
+.preview__details .link {
   color: #01aaff;
   font-weight: bold;
   cursor: pointer;
 }
 
-.preview-price .link {
+.preview__price .link {
   font-weight: bold;
   color: black;
 }
